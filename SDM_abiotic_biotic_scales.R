@@ -53,12 +53,12 @@ Height <- resample(Height, slope)
 
 
 # check also the crs and make sure they are the same
-crs(lst_mean) <- crs(slope)
-crs(TSF) <- crs(slope)
-crs(TN) <- crs(slope)
-crs(P) <- crs(slope)
-crs(K) <- crs(slope)
-crs(Height) <- crs(slope)
+# crs(lst_mean) <- crs(slope)
+# crs(TSF) <- crs(slope)
+# crs(TN) <- crs(slope)
+# crs(P) <- crs(slope)
+# crs(K) <- crs(slope)
+# crs(Height) <- crs(slope)
 
 ###############################NOW PUT TOGETHER THE PREDICTORS THAT WE WANT TO USE FOR SDMs 
 ######################################RUN THE FOLLOWING LINES BASED ON NEEDED
@@ -276,3 +276,4 @@ calc_pred_val <- calc_pred*100/1000
 getwd()
 # write raster final
 writeRaster(calc_pred_val, "predicted_sericea_mean_50run_perc.tif")
+
